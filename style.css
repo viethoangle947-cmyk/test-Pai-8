@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0b1220;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 22px;
+    color: #38bdf8;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn:active {
+    background-color: #1e40af;
+    transform: scale(0.97);
+}
+
+.input {
+    padding: 8px 12px;
+    border: 2px solid #334155;
+    border-radius: 6px;
+    outline: none;
+    background-color: #0f172a;
+    color: white;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    width: 260px;
+}
+.input:focus-visible {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35);
+}
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    font-size: 24px;
+    color: white;
+}
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+.section-title:hover::after {
+    width: 100%;
+}
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background-color: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 400px;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    background-color: #334155;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.info h3 {
+    color: white;
+    margin: 0 0 8px 0;
+}
+.info p {
+    color: #38bdf8;
+    margin: 0;
+    font-size: 14px;
+}
+.hint {
+    font-size: 13px;
+    color: #94a3b8;
+    font-style: italic;
+}
